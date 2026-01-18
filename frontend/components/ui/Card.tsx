@@ -11,12 +11,12 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant = 'default', padding = 'md', children, ...props }, ref) => {
-    const baseStyles = 'glass rounded-2xl border border-dark-border/50';
+    const baseStyles = 'glass rounded-2xl border border-light-border dark:border-dark-border/50 transition-all duration-300';
 
     const variants = {
-      default: 'shadow-card-dark',
+      default: 'shadow-card dark:shadow-card-dark',
       interactive:
-        'shadow-card-dark card-cinematic cursor-pointer',
+        'shadow-card dark:shadow-card-dark card-cinematic cursor-pointer hover:shadow-xl hover:-translate-y-1',
     };
 
     const paddings = {

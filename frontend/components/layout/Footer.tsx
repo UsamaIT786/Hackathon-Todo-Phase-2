@@ -10,9 +10,14 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <Link href={ROUTES.HOME} className="flex items-center gap-2 min-h-[44px]">
+            <Link href={ROUTES.HOME} className="flex items-center gap-2 min-h-[44px] group">
+              <div className="w-7 h-7 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20,6 9,17 4,12" />
+                </svg>
+              </div>
               <span className="text-xl sm:text-2xl font-bold gradient-text">Todo</span>
-              <span className="text-xl sm:text-2xl font-bold text-gray-primary dark:text-white">App</span>
+              <span className="text-xl sm:text-2xl font-bold text-gray-primary dark:text-white">Manager</span>
             </Link>
             <p className="text-sm text-gray-secondary dark:text-gray-400 max-w-xs">
               A modern, polished task management application to help you stay organized
@@ -68,7 +73,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-border dark:border-dark-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-secondary dark:text-gray-400">
-            &copy; {currentYear} TodoApp. All rights reserved.
+            &copy; {currentYear} Todo Manager. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             {/* Social Links */}

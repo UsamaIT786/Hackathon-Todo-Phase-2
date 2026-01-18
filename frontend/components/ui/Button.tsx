@@ -24,17 +24,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]';
+      'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden';
 
     const variants = {
       primary:
-        'bg-gradient-to-r from-primary to-secondary text-white shadow-lg hover:shadow-glow-pink hover:from-primary-dark hover:to-secondary-dark',
+        'bg-gradient-to-r from-primary to-secondary text-white shadow-lg hover:shadow-glow-green hover:from-primary-dark hover:to-secondary-dark before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0 before:-translate-x-full hover:before:translate-x-full before:transition-transform before:duration-700',
       secondary:
-        'bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white dark:text-primary-light',
+        'bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white dark:text-primary-light hover:shadow-lg',
       ghost:
-        'bg-transparent hover:bg-primary/10 text-primary dark:text-primary-light',
+        'bg-transparent hover:bg-primary/10 text-primary dark:text-primary-light hover:shadow-sm',
       danger:
-        'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg hover:from-red-600 hover:to-red-700',
+        'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg hover:from-red-600 hover:to-red-700 hover:shadow-xl',
     };
 
     const sizes = {

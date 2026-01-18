@@ -18,22 +18,24 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'TodoApp - Cinematic Task Manager',
-    template: '%s | TodoApp',
+    default: 'Todo Manager - Smart Task Management',
+    template: '%s | Todo Manager',
   },
   description:
-    'A stunning, cinematic task management application with beautiful animations and dark mode.',
-  keywords: ['todo', 'tasks', 'productivity', 'task management', 'dark mode'],
-  authors: [{ name: 'TodoApp Team' }],
-  creator: 'TodoApp',
+    'A clean, professional task management application with a beautiful light green theme.',
+  keywords: ['todo', 'tasks', 'productivity', 'task management', 'todo manager'],
+  authors: [{ name: 'Todo Manager Team' }],
+  creator: 'Todo Manager',
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#EC4899',
+  themeColor: '#22C55E',
 };
+
+import { SplashScreen } from '@/components/ui/SplashScreen';
 
 export default function RootLayout({
   children,
@@ -43,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable + " " + poppins.variable + " dark"} suppressHydrationWarning>
       <body className='min-h-screen antialiased transition-colors duration-300'>
+        <SplashScreen />
         <a href='#main-content' className='skip-to-main'>
           Skip to main content
         </a>

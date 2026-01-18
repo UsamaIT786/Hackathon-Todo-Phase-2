@@ -6,7 +6,7 @@ import { Skeleton } from '@/components/ui/Skeleton';
 
 export const metadata: Metadata = {
   title: 'Sign Up',
-  description: 'Create a TodoApp account to start managing your tasks effectively.',
+  description: 'Create a Todo Manager account to start managing your tasks effectively.',
 };
 
 function SignupFormWrapper() {
@@ -43,7 +43,7 @@ export default function SignupPage() {
       <CardHeader className="text-center">
         <CardTitle className="text-2xl">Create your account</CardTitle>
         <CardDescription>
-          Get started with TodoApp and boost your productivity
+          Get started with Todo Manager and boost your productivity
         </CardDescription>
       </CardHeader>
       <CardContent>

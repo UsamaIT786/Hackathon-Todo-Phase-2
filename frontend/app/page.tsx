@@ -6,11 +6,11 @@ import { Features } from '@/components/landing/Features';
 import { CTA } from '@/components/landing/CTA';
 
 export const metadata: Metadata = {
-  title: 'TodoApp - Manage Your Tasks with Elegance',
+  title: 'Todo Manager - Manage Your Tasks with Clarity',
   description:
     'A beautifully designed task management app that helps you stay organized, focused, and productive. Simple, fast, and delightful to use.',
   openGraph: {
-    title: 'TodoApp - Manage Your Tasks with Elegance',
+    title: 'Todo Manager - Manage Your Tasks with Clarity',
     description:
       'A beautifully designed task management app that helps you stay organized, focused, and productive.',
     type: 'website',

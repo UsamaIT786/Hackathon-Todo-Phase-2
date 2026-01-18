@@ -34,9 +34,13 @@ export function Header() {
             href={ROUTES.HOME}
             className="flex items-center gap-2 group min-h-[44px] min-w-[44px]"
           >
+            <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20,6 9,17 4,12" />
+              </svg>
+            </div>
             <span className="text-xl sm:text-2xl font-bold gradient-text">Todo</span>
-            <span className="text-xl sm:text-2xl font-bold text-gray-primary dark:text-white">App</span>
-            <span className="text-xl sm:text-2xl" aria-hidden="true">✨</span>
+            <span className="text-xl sm:text-2xl font-bold text-gray-primary dark:text-white">Manager</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -89,15 +93,26 @@ export function Header() {
                   My Tasks
                 </Link>
                 <div className="flex items-center gap-3 lg:gap-4">
-                  <span className="text-sm text-gray-secondary dark:text-gray-400 hidden lg:inline">
-                    {user?.name}
-                  </span>
+                  {/* User Avatar and Email */}
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/20">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-medium text-sm">
+                      {user?.email?.charAt(0).toUpperCase() || 'U'}
+                    </div>
+                    <span className="text-sm font-medium text-gray-primary dark:text-gray-300 hidden lg:inline max-w-[150px] truncate">
+                      {user?.email}
+                    </span>
+                  </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={handleLogout}
-                    className="min-h-[44px]"
+                    className="min-h-[44px] text-gray-secondary hover:text-red-500"
                   >
+                    <svg className="w-5 h-5 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                      <polyline points="16 17 21 12 16 7" />
+                      <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>
                     Logout
                   </Button>
                 </div>

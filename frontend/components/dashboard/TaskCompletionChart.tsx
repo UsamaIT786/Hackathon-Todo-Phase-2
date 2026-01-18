@@ -105,8 +105,8 @@ export function TaskCompletionChart({ activities }: TaskCompletionChartProps) {
               <stop offset="95%" stopColor="#22c55e" stopOpacity={0} />
             </linearGradient>
             <linearGradient id="colorCompleted" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#EC4899" stopOpacity={0.3} />
-              <stop offset="95%" stopColor="#EC4899" stopOpacity={0} />
+              <stop offset="5%" stopColor="#14B8A6" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="#14B8A6" stopOpacity={0} />
             </linearGradient>
             <linearGradient id="colorDeleted" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#ef4444" stopOpacity={0.3} />
@@ -156,7 +156,7 @@ export function TaskCompletionChart({ activities }: TaskCompletionChartProps) {
             type="monotone"
             dataKey="completed"
             name="Completed"
-            stroke="#EC4899"
+            stroke="#14B8A6"
             strokeWidth={2}
             fillOpacity={1}
             fill="url(#colorCompleted)"

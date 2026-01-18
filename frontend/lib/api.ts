@@ -28,8 +28,9 @@ import type {
   ApiResult,
 } from '@/types';
 
-// Enable mock mode for development without backend
-const USE_MOCK_API = process.env.NEXT_PUBLIC_USE_MOCK_API === 'true';
+// Always use mock API - no backend server required
+// All auth and data is stored locally in the browser
+const USE_MOCK_API = true;
 
 // ============ Token Management ============
 let accessToken: string | null = null;

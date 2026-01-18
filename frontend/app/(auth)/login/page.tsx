@@ -6,7 +6,7 @@ import { Skeleton } from '@/components/ui/Skeleton';
 
 export const metadata: Metadata = {
   title: 'Login',
-  description: 'Sign in to your TodoApp account to manage your tasks.',
+  description: 'Sign in to your Todo Manager account to manage your tasks.',
 };
 
 function LoginFormWrapper() {

@@ -14,8 +14,8 @@ export function Features() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-          <polyline points="22 4 12 14.01 9 11.01" />
+          <path d="M9 11l3 3L22 4" />
+          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
         </svg>
       ),
       title: 'Simple Task Management',
@@ -58,8 +58,8 @@ export function Features() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 12l2 2 4-4" />
         </svg>
       ),
       title: 'Secure by Design',
@@ -80,9 +80,8 @@ export function Features() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-          <line x1="8" y1="21" x2="16" y2="21" />
-          <line x1="12" y1="17" x2="12" y2="21" />
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+          <line x1="12" y1="18" x2="12.01" y2="18" />
         </svg>
       ),
       title: 'Works Everywhere',
@@ -103,7 +102,9 @@ export function Features() {
           strokeLinejoin="round"
           aria-hidden="true"
         >
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
         </svg>
       ),
       title: 'Track Progress',
@@ -131,7 +132,7 @@ export function Features() {
       ),
       title: 'Beautiful Design',
       description:
-        'A premium, polished interface with elegant animations and a refined pink-purple gradient theme.',
+        'A premium, polished interface with elegant animations and a refined blue theme.',
     },
   ];
 
@@ -154,15 +155,15 @@ export function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-6 bg-white dark:bg-dark-card rounded-xl border border-gray-border dark:border-dark-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+              className="group p-6 bg-white dark:bg-dark-card rounded-2xl border border-gray-border dark:border-dark-border hover:border-primary/40 hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-colors duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center text-primary mb-5 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-semibold text-gray-primary dark:text-white mb-2">
+              <h3 className="text-lg font-semibold text-gray-primary dark:text-white mb-2 group-hover:text-primary transition-colors duration-300">
                 {feature.title}
               </h3>
-              <p className="text-gray-secondary dark:text-gray-400">{feature.description}</p>
+              <p className="text-gray-secondary dark:text-gray-400 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

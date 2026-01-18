@@ -37,9 +37,13 @@ export function SignupForm() {
     if (result.success) {
       success(SUCCESS_MESSAGES.SIGNED_UP);
     } else {
-      showError(result.error || ERROR_MESSAGES.SIGNUP_ERROR);
+      // Check for specific error types
+      const errorMessage = result.error?.includes('already registered')
+        ? ERROR_MESSAGES.EMAIL_EXISTS
+        : (result.error || ERROR_MESSAGES.SIGNUP_ERROR);
+      showError(errorMessage);
       // Set form-level error for accessibility
-      setError('root', { message: result.error || ERROR_MESSAGES.SIGNUP_ERROR });
+      setError('root', { message: errorMessage });
     }
   };
 
@@ -48,10 +52,15 @@ export function SignupForm() {
       {/* Form-level error */}
       {errors.root && (
         <div
-          className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-600 text-sm"
+          className="p-4 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-600 dark:text-red-400 text-sm flex items-start gap-3"
           role="alert"
         >
-          {errors.root.message}
+          <svg className="w-5 h-5 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <span>{errors.root.message}</span>
         </div>
       )}
 

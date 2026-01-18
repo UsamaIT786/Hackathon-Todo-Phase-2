@@ -116,14 +116,19 @@ export function MobileNav({
                     variants={itemVariants}
                     initial="hidden"
                     animate="visible"
-                    className="px-4 py-3 mb-2 rounded-xl bg-gray-50 dark:bg-dark-200"
+                    className="flex items-center gap-3 px-4 py-3 mb-2 rounded-xl bg-primary/5 border border-primary/20"
                   >
-                    <p className="text-sm font-medium text-gray-primary dark:text-white">
-                      {user?.name}
-                    </p>
-                    <p className="text-xs text-gray-secondary dark:text-gray-400 truncate">
-                      {user?.email}
-                    </p>
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-semibold text-base flex-shrink-0">
+                      {user?.email?.charAt(0).toUpperCase() || 'U'}
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-gray-primary dark:text-white truncate">
+                        {user?.name || 'User'}
+                      </p>
+                      <p className="text-xs text-gray-secondary dark:text-gray-400 truncate">
+                        {user?.email}
+                      </p>
+                    </div>
                   </motion.div>
 
                   {/* Dashboard Link */}

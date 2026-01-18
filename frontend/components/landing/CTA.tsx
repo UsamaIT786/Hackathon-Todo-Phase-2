@@ -19,7 +19,7 @@ export function CTA() {
             Ready to Get Organized?
           </h2>
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-xl mx-auto">
-            Join thousands of productive people who trust TodoApp to manage their
+            Join thousands of productive people who trust Todo Manager to manage their
             daily tasks. Start for free today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">

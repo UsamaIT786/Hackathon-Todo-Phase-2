@@ -81,18 +81,21 @@ export const ERROR_MESSAGES = {
   TASK_CREATE_ERROR: 'Failed to create task. Please try again.',
   TASK_UPDATE_ERROR: 'Failed to update task. Please try again.',
   TASK_DELETE_ERROR: 'Failed to delete task. Please try again.',
-  LOGIN_ERROR: 'Invalid email or password.',
+  LOGIN_ERROR: 'Invalid email or password. Please check your credentials and try again.',
   SIGNUP_ERROR: 'Failed to create account. Please try again.',
+  EMAIL_EXISTS: 'This email is already registered. Please sign in or use a different email.',
+  INVALID_CREDENTIALS: 'The email or password you entered is incorrect. Please try again.',
 } as const;
 
 // ============ Success Messages ============
 export const SUCCESS_MESSAGES = {
-  TASK_CREATED: 'Task created successfully',
-  TASK_UPDATED: 'Task updated successfully',
-  TASK_DELETED: 'Task deleted successfully',
-  TASK_COMPLETED: 'Task marked as complete',
-  TASK_REOPENED: 'Task marked as pending',
-  LOGGED_IN: 'Welcome back!',
-  SIGNED_UP: 'Account created successfully',
-  LOGGED_OUT: 'You have been logged out',
+  TASK_CREATED: 'Task created successfully!',
+  TASK_UPDATED: 'Task updated successfully!',
+  TASK_DELETED: 'Task deleted successfully!',
+  TASK_COMPLETED: 'Great job! Task marked as complete.',
+  TASK_REOPENED: 'Task marked as pending.',
+  LOGGED_IN: 'Welcome back! You have successfully logged in.',
+  SIGNED_UP: 'Account created successfully! Welcome to Todo Manager.',
+  LOGGED_OUT: 'You have been logged out successfully.',
 } as const;
+
