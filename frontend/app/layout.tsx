@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   keywords: ['todo', 'tasks', 'productivity', 'task management', 'todo manager'],
   authors: [{ name: 'Todo Manager Team' }],
   creator: 'Todo Manager',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.svg',
+  },
 };
 
 export const viewport: Viewport = {
