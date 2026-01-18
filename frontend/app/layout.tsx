@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | Todo Manager',
   },
   description:
-    'A clean, professional task management application with a beautiful light green theme.',
+    'A clean, professional task management application with a beautiful blue theme.',
   keywords: ['todo', 'tasks', 'productivity', 'task management', 'todo manager'],
   authors: [{ name: 'Todo Manager Team' }],
   creator: 'Todo Manager',

@@ -203,7 +203,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #22C55E, #10B981);
+  background: linear-gradient(135deg, #2563EB, #3B82F6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -220,7 +220,7 @@ body {
   content: '';
   position: absolute;
   inset: -2px;
-  background: linear-gradient(135deg, #22C55E, #10B981, #14B8A6);
+  background: linear-gradient(135deg, #2563EB, #3B82F6, #0EA5E9);
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
@@ -252,15 +252,15 @@ body {
   transform: translateY(-5px);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.08),
-    0 0 30px rgba(34, 197, 94, 0.1),
-    0 0 60px rgba(16, 185, 129, 0.1);
+    0 0 30px rgba(37, 99, 235, 0.1),
+    0 0 60px rgba(59, 130, 246, 0.1);
 }
 
 .dark .card-cinematic:hover {
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.5),
-    0 0 30px rgba(34, 197, 94, 0.2),
-    0 0 60px rgba(16, 185, 129, 0.2);
+    0 0 30px rgba(37, 99, 235, 0.2),
+    0 0 60px rgba(59, 130, 246, 0.2);
 }
 
 /* Sticker/Emoji decorations */
